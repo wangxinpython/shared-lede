@@ -2,9 +2,10 @@
 
 #修改登录IP
 #sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
-for configFile in $(ls target/linux/ramips/mt7621/config*) 
+target=$(grep "^CONFIG_TARGET" 1.config --max-count=1 | awk -F "=" '{print $1}' | awk -F "_" '{print $3}') 
+for configFile in $(ls target/linux/$target/config*)  
 do
-    echo -e "\nCONFIG_NETFILTER_NETLINK_GLUE_CT=y" >> $configFile 
+    echo -e "\nCONFIG_NETFILTER_NETLINK_GLUE_CT=y" >> $configFile  
 done
 #修改主机名
 #sed -i 's/OpenWrt/Xiaomi-Router/g' package/base-files/files/bin/config_generate
