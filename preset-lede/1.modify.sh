@@ -2,14 +2,14 @@
 
 #修改登录IP
 #sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
-target=$(grep "^CONFIG_TARGET" temp.config --max-count=1 | awk -F "=" '{print $1}' | awk -F "_" '{print $3}')  
-for configFile in $(ls target/linux/$target/config*)  
+target=$(grep "^CONFIG_TARGET" preset-lede/temp.config --max-count=1 | awk -F "=" '{print $1}' | awk -F "_" '{print $3}')   
+for configFile in $(ls target/linux/$target/config*)   
 do
     echo -e "\nCONFIG_NETFILTER_NETLINK_GLUE_CT=y" >> $configFile  
 done
 #修改主机名
 #sed -i 's/OpenWrt/Xiaomi-Router/g' package/base-files/files/bin/config_generate
-#sed -i 's/OpenWrt/Phicomm-Router/g' package/base-files/files/bin/config_generate
+#sed -i 's/OpenWrt/Phicomm-Router/g' package/base-files/files/bin/config_generate 
 
 #修改型号显示
 #sed -i 's/Xiaomi Mi Router 4A Gigabit Edition/Xiaomi 4A Gigabit/g' target/linux/ramips/dts/mt7621_xiaomi_mi-router-4a-gigabit.dts 
