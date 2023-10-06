@@ -11,3 +11,5 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config.git
 git clone --depth 1 https://github.com/kenzok8/openwrt-packages.git
 git clone --depth 1 https://github.com/kenzok8/small.git
 git clone --depth 1 https://github.com/Ausaci/luci-app-nat6-helper.git
+git clone https://github.com/CHN-beta/rkp-ipid package/rkp-ipid
+git clone https://github.com/Zxilly/UA2F package/UA2F
