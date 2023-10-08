@@ -42,8 +42,8 @@ sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
 #sed -i '/root/croot:$1$CBd7u73H$LvSDVXLBrzpk4JfuuN.Lv1:18676:0:99999:7:::' package/base-files/files/etc/shadow
 for configFile in $(ls target/linux/ramips/mt7621/config*)
 do
-    echo -e "\nCONFIG_NETFILTER_NETLINK_GLUE_CT=y" >> $configFile
+    echo -e "\nCONFIG_NETFILTER_NETLINK_GLUE_CT=y" >> $configFile 
 done
 #替换geodata源
 GEODIR=package/supply-packages/small/v2ray-geodata
-. extra-files/update-geodata.sh 
+. extra-files/update-geodata.sh
