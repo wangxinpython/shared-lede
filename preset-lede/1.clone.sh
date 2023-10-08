@@ -10,7 +10,5 @@ git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config.git
 git clone --depth 1 https://github.com/kenzok8/openwrt-packages.git
 git clone --depth 1 https://github.com/kenzok8/small.git
-
-git clone --depth 1 https://github.com/fw876/helloworld.git
 git clone --depth 1 https://github.com/CHN-beta/rkp-ipid.git
 git clone --depth 1 https://github.com/Zxilly/UA2F.git
