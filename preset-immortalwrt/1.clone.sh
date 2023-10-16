@@ -12,6 +12,5 @@ git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon.git
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config.git
 git clone --depth 1 -b packages https://github.com/xiaorouji/openwrt-passwall.git pw-dependencies
 git clone --depth 1 https://github.com/CHN-beta/rkp-ipid.git
-git clone --depth 1 https://github.com/Zxilly/UA2F.git
-svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall
+git clone --depth 1 https://github.com/Zxilly/UA2F.git 
 svn export https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
