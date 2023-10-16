@@ -33,7 +33,7 @@ sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
 #cp extra-files/322-mt7621-fix-cpu-clk-add-clkdev.patch target/linux/ramips/patches-5.10/
 
 # 替换默认主题为 luci-theme-argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile 
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 #设置WIFI
 #sed -i 's/OpenWrt/coolxiaomi/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 #sed -i 's/wireless.default_radio${devidx}.encryption=none/wireless.default_radio${devidx}.encryption=psk-mixed/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
@@ -44,7 +44,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 #sed -i '/root/croot:$1$CBd7u73H$LvSDVXLBrzpk4JfuuN.Lv1:18676:0:99999:7:::' package/base-files/files/etc/shadow
 for configFile in $(ls target/linux/ramips/mt7621/config*)
 do
-    echo -e "\nCONFIG_NETFILTER_NETLINK_GLUE_CT=y" >> $configFile 
+    echo -e "\nCONFIG_NETFILTER_NETLINK_GLUE_CT=y" >> $configFile
 done
 #替换geodata源
 GEODIR=package/supply-packages/small/v2ray-geodata
